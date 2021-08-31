@@ -9,7 +9,7 @@ from NLM20_find_lam3 import *
 warnings.simplefilter('ignore')
 
 def solve(params, output_options, fig_9):
-    """ parallel calculations of threshold values for each wrinkling mode
+    """ Calculations of threshold values for each wrinkling mode
 
     Parameters
     ----------
