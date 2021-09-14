@@ -38,13 +38,13 @@ if __name__ == '__main__':
     for i in range(18):
         betas[ind_rounded_b[i]] = beta_rounded[i]
 
-    [critical_strains, crit_strain_fig_5_plain, crit_strain_fig_5_Uni, thresh_strains, thresh_strains_fig9] = read_data()
+    [critical_strains, crit_strain_fig_5_plane, crit_strain_fig_5_Uni, thresh_strains, thresh_strains_fig9] = read_data()
 
 
 
     plot_fig3(P_3_P_2_ratio, lam1s, lam3s, tol)
     plot_fig4(thresh_strains, P_2s, betas)
-    plot_fig5(critical_strains, crit_strain_fig_5_plain, crit_strain_fig_5_Uni, wavelengths)
+    plot_fig5(critical_strains, crit_strain_fig_5_plane, crit_strain_fig_5_Uni, wavelengths)
     plot_fig6(critical_strains, wavelengths, ind_rounded_b)
     plot_fig7(critical_strains, wavelengths, ind_rounded_b)
     plot_fig8(thresh_strains, betas, ind_rounded_p)
