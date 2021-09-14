@@ -9,11 +9,11 @@ from NLM20_find_lam3 import *
 def read_data():
     # load the results for each parts and concatenate them.
     critical_strains = numpy.loadtxt('critical_strain.txt')
-    crit_strain_fig_5_plain = numpy.loadtxt('critical_strain_fig_5_plain.txt')
+    crit_strain_fig_5_plane = numpy.loadtxt('critical_strain_fig_5_plane.txt')
     crit_strain_fig_5_Uni = numpy.loadtxt('critical_strain_fig_5_Uni.txt')
     thresh_strains = numpy.loadtxt('threshold_strain.txt')
     thresh_strains_fig9 = numpy.loadtxt('threshold_strain_fig9.txt')
-    return critical_strains, crit_strain_fig_5_plain, crit_strain_fig_5_Uni, thresh_strains, thresh_strains_fig9
+    return critical_strains, crit_strain_fig_5_plane, crit_strain_fig_5_Uni, thresh_strains, thresh_strains_fig9
 
 def plot_fig3(P_3_P_2_ratio, lam1s, lam3s, tol):
 
@@ -100,7 +100,7 @@ def plot_fig4(thresh_strains, P_2s, betas):
     cb1.set_label('$ \mathit{\\epsilon^{th}_c} $', fontsize=30, rotation=0)
     plt.savefig('fig_4.png', dpi=300)
 
-def plot_fig5(crit_strain_fig_5, crit_strain_fig_5_plain, crit_strain_fig_5_Uni, wavelengths):
+def plot_fig5(crit_strain_fig_5, crit_strain_fig_5_plane, crit_strain_fig_5_Uni, wavelengths):
 
     crit_strain_fig_5 = forming_crit_strain_fig5(crit_strain_fig_5)
 
@@ -115,7 +115,7 @@ def plot_fig5(crit_strain_fig_5, crit_strain_fig_5_plain, crit_strain_fig_5_Uni,
     plt.gca().set_ylim(0., 1)
     plt.gca().set_xlim(0.1, 1000.)
     for i in range(8):
-        plt.semilogx(wavelengths, crit_strain_fig_5_plain[:, i * 2], linestyle='--')
+        plt.semilogx(wavelengths, crit_strain_fig_5_plane[:, i * 2], linestyle='--')
     for i in range(8):
         plt.semilogx(wavelengths, crit_strain_fig_5[:, i * 2], linestyle='-')
     #
@@ -168,7 +168,7 @@ def plot_fig5(crit_strain_fig_5, crit_strain_fig_5_plain, crit_strain_fig_5_Uni,
     ax4.text(0.07, 0.452, '$ \mathit{\\epsilon_c} $', rotation=0, fontsize=50)
 
     for i in range(4):
-        plt.semilogx(wavelengths, crit_strain_fig_5_plain[:, i * 2], linestyle='--', linewidth=5)
+        plt.semilogx(wavelengths, crit_strain_fig_5_plane[:, i * 2], linestyle='--', linewidth=5)
 
     ax4.set_prop_cycle('color', plt.cm.Spectral(numpy.linspace(0, 1, n_lines)))
     for i in range(4):
