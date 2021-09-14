@@ -43,7 +43,7 @@ def solve(params, output_options, fig_9):
 
     Notes
     -----
-    "critical_strain_fig_5_plain.txt" and "critical_strain_fig_5_Uni.txt" are provided for figure 5 a and b.
+    "critical_strain_fig_5_plane.txt" and "critical_strain_fig_5_Uni.txt" are provided for figure 5 a and b.
 
 
     """
