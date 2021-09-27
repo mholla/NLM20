@@ -401,6 +401,7 @@ def find_threshold_values(wavelengths, crit_strains, i, j, thresh_wavelengths, t
         critical wavelength (corresponding to critical strain)
     thresh_strains :
         minimum critical strain
+        
     Returns
     -------
     thresh_wavelengths : ndarray float

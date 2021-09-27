@@ -34,7 +34,7 @@ def solve(params, output_options, fig_9):
                 printoutput : boolean
                     whether or not to print every root found at every wavelength
     fig_9 : boolean
-        whether or not calculate the results for figure 9
+                whether or not calculate the results for figure 9
 
     Returns
     -------
