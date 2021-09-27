@@ -63,7 +63,8 @@ def solve(params, output_options, fig_9):
 
             beta = betas[i]
             P_2 = P_2s[j]
-            P_3 = P_2 * 1.3
+            P_3_P_2_ratio = 1.3 # The other three ratios have been used to generate Fig. 3 (See NLM20_find_lam3.py, 0,0.8,2). # P_3_f / P_2_f
+            P_3 = P_2 * P_3_P_2_ratio # P_3, pressure in 3 (z) direction, P_3 = P_2 * 1.3
 
             lam3s = numpy.zeros(npts)
 
@@ -137,11 +138,11 @@ if __name__ == '__main__':
     P2_b = numpy.linspace(1.1, 4, int(n_P2 / 2))
     P_2s = numpy.concatenate((P2_a, P2_b), axis=0) # pressures in 2 direction (normalized by mu_f)
     # round some values of H_ms array for certain figures
-    P_2s_rounded = [0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,1.2,1.4,1.8,2,2.2,2.5,3,3.5,4]  # Rounded P_2 values
-    ind_rounded = [2,4,6,9,11,13,15,17,19,21,22,25,26,27,29,33,36,39]
+    P_2s_rounded = [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.2, 1.4, 1.8, 2, 2.2, 2.5, 3, 3.5, 4]  # Rounded P_2 values
+    ind_rounded = [2, 4, 6, 9, 11, 13, 15, 17, 19, 21, 22, 25, 26, 27, 29, 33, 36, 39]
     for i in range(18):
         P_2s[ind_rounded[i]] = P_2s_rounded[i]
-    P_3_P_2_ratio = [0,0.8,1.3,2] # P_3_f / P_2_f
+    P_3_P_2_ratio = [0, 0.8, 1.3, 2] # P_3_f / P_2_f
     betas_1 = numpy.linspace(0.1, 0.9, int(n_betas / 2))  # softer layer (beta < 1)
     betas_2 = numpy.linspace(1.1, 4, int(n_betas / 2))  # stiffer layer (beta > 1)
     betas = numpy.concatenate((betas_1, betas_2), axis=0)

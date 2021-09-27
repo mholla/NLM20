@@ -90,6 +90,7 @@ def newtons_method(f, df, P_2, P_3, lam3_n, tol, lam1):
             tolerance for Newton-Raphson's method; solution will be returned when the absolute value of the function is below the tolerance
         lam1 : floats
             value of compression in 1 direction
+
         Returns
         -------
         lam3_np1 : float
@@ -122,6 +123,7 @@ def f(P_2, P_3, lam3_n, lam1):
             values of compression in 3 direction.
         lam1 : floats
             value of compression in 1 direction
+
         Returns
         -------
         lam3_np1 : float
@@ -143,6 +145,7 @@ def df(P_2, P_3, lam3_n, lam1):
             values of compression in 3 direction.
         lam1 : floats
             value of compression in 1 direction
+
         Returns
         -------
         lam3_np1 : float
@@ -164,6 +167,7 @@ def dlam3(f, P_2, P_3, lam3_n, lam1):
             values of compression in 3 direction.
         lam1 : floats
             value of compression in 1 direction
+            
         Returns
         -------
         abs(0 - f(P_2, P_3, lam3_n, lam1)) : float
